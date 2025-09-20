@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+     width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+.border{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.title{
+    display: flex;
+    gap: 5px;
+}
+.title h2{
+    font-size: 25px;
+    margin-top: 10px;
+}
+.img{
+    width: 30px;
+}
+.btns{
+    margin: 25px 25px 25px 0px;
+    display: flex;
+}
+
+.intbtn{
+    width: 350px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 30px;
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: #edeef0;
+    font-size: 20px;
+}
+.btn{
+    width: 80px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.btn:hover{
+    background-color: #ea2009;
+}
+ul li {
+    position: relative;
+    list-style: none;
+    padding: 12px 50px 12px 50px; /* left 50px for circle, right 50px for × + ✏️ */
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+}
+
+/* default circle */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(img/Free-Printable-Circle-Shape.webp);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;   
+}
+
+/* when checked */
+ul li.checked::before {
+    background-image: url(img/download.png);
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+
+}
+
+ ul li span {
+    position: absolute;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+ul li .delete {
+    position: absolute;
+    right: 0;
+}
+
+
+ul li .edit {
+    position: absolute;
+    right: 45px;
+}
+
+
+ul li span:hover {
+    background: #edeef0;
+}
